@@ -41,6 +41,7 @@ jobs:
           username: ${{ secrets.LIGHTSAIL_USER }}
           key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
           script: |
-            cd /home/ubuntu/nestjs-app
+            cd /home/ubuntu/ci-cd
              /usr/bin/npm install --omit=dev
              /usr/bin restart ecosystem.config.js || /usr/bin/pm2 start ecosystem.config.js
+
